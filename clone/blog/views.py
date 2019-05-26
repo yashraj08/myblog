@@ -85,5 +85,5 @@ def comment_remove(request,pk):
 @login_required
 def post_publish(request,pk):
     pos=get_object_or_404(Post,pk=pk)
-    post.publish(pos)
+    Post.publish(pos)
     return redirect('blog:postdetail',pk=pk)
